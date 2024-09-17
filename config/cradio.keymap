@@ -52,10 +52,10 @@
 
         sym_layer {
             bindings = <
-            &kp RBKT   &kp GRAVE  &kp DOT    &kp BSLH   &kp EQUAL     &kp PAUS   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
-            &kp LBKT   &kp SQT    &kp COMMA  &kp FSLH   &kp MINUS     &kp INS    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+            &kp RBKT   &kp GRAVE  &kp DOT    &kp BSLH   &kp EQUAL     &kp K_APP  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+            &kp LBKT   &kp SQT    &kp COMMA  &kp FSLH   &kp MINUS     &kp SEMI   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
             &kp N1     LMAC(N2,   N3,        N4)        &kp N5        &kp N6     LCAM(N7,   N8,        N9)        &kp N0
-                                             &kp SEMI   &trans        LSH(K_APP) &kp SCLK
+                                             &kp INS    &trans        LSH(PAUS)  &kp SCLK
             >;
         };
 
