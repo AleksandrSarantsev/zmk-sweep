@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define LSH(a)         &mdht LSHIFT a
-#define LMAC(a, b, c)  &mdht LMETA a &ht LALT b &ht LCTRL c
-#define LCAM(a, b, c)  &mdht LCTRL a &ht LALT b &ht LMETA c
+#define LMAC(a, b, c)  &mdht LMETA a &mdht LALT b &mdht LCTRL c
+#define LCAM(a, b, c)  &mdht LCTRL a &mdht LALT b &mdht LMETA c
 #define MO_SYM(a)      &lrht 1 a
 #define MO_FUNC(a)     &lrht 2 a
 #define BTSL(a)        &bt BT_SEL a
