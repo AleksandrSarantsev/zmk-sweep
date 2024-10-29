@@ -5,17 +5,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define LSH(a)         &mht LSHIFT a
-#define LMAC(a, b, c)  &mht LMETA a &ht LALT b &ht LCTRL c
-#define LCAM(a, b, c)  &mht LCTRL a &ht LALT b &ht LMETA c
-#define MO_SYM(a)      &lht 1 a
-#define MO_FUNC(a)     &lht 2 a
+#define LSH(a)         &mdht LSHIFT a
+#define LMAC(a, b, c)  &mdht LMETA a &ht LALT b &ht LCTRL c
+#define LCAM(a, b, c)  &mdht LCTRL a &ht LALT b &ht LMETA c
+#define MO_SYM(a)      &lrht 1 a
+#define MO_FUNC(a)     &lrht 2 a
 #define BTSL(a)        &bt BT_SEL a
 
 
 / {
     behaviors {
-        mht: modifier_hold_tap {
+        mdht: modifier_hold_tap {
+            label = "MODIFIER_HOLD_TAP";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -25,7 +26,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lht: layer_hold_tap {
+        lrht: layer_hold_tap {
+            label = "LAYER_HOLD_TAP";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
