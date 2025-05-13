@@ -15,8 +15,7 @@
 
 / {
     behaviors {
-        mdht: modifier_hold_tap {
-            label = "MODIFIER_HOLD_TAP";
+        mdht: mdht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -25,8 +24,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lrht: layer_hold_tap {
-            label = "LAYER_HOLD_TAP";
+        lrht: lrht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -40,10 +38,14 @@
     macros {
         lswt: lswt {
             compatible="zmk,behaviour-macro";
+            #binding-cells= <0>;
+            wait-ms = <25>;
+            tap-ms = <25>;
             bindings 
                 = <&macro_press &kp LMETA>
                 , <&macro_tap &kp SPC>
-                , <&macro_release &kp LMETA>;
+                , <&macro_release &kp LMETA>
+                ;
         };
     };
     
