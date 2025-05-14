@@ -75,11 +75,15 @@
             tap-ms = <10>;
             bindings 
                 = <&macro_tap &lsw>
+                , <&macro_tap_time 2>
+                , <&macro_wait_time 2>
                 , <&macro_param_1to1>
                 , <&macro_press &mo MACRO_PLACEHOLDER>
                 , <&macro_pause_for_release>
                 , <&macro_param_1to1>
                 , <&macro_release &mo MACRO_PLACEHOLDER>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 5>
                 , <&macro_tap &lsw>
                 ;
         };
@@ -90,15 +94,19 @@
             wait-ms = <5>;
             tap-ms = <10>;
             bindings 
-                = <&macro_tap &tog 1>
-                , <&macro_press &mo 0>
-                , <&macro_param_1to1>
+                = <&macro_param_1to1>
                 , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_tap_time 2>
+                , <&macro_wait_time 2>
+                , <&macro_tap &tog 1>
+                , <&macro_press &mo 0>
                 , <&macro_pause_for_release>
-                , <&macro_param_1to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &mo 0>
                 , <&macro_tap &tog 1>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 5>
+                , <&macro_param_1to1>
+                , <&macro_release &kp MACRO_PLACEHOLDER>
                 ;
         };
     };
@@ -158,7 +166,7 @@
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp J      &kp E      &kp TAB
             &kp Y      &kp H      &kp N      &kp C         &kp U          &kp Q      &sl 2      &kp F      &kp T      &kp B
-            &kp LBKT   RLMAC(V,    COMMA,     I)           &kp PSCRN      &kp CAPS   RLCAM(G,    J,         P)        &kp X
+            &kp LBKT   RLMAC(V,    COMMA,     I)           &kp PSCRN      &kp CAPS   RLCAM(G,    M,         P)        &kp X
                                              MO_FUNC(ESC)  RMO_SYM(BSPC)  LSH(SPC)   &kp ENTER
             >;
         };
