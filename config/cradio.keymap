@@ -15,6 +15,8 @@
 #define RLMAC(a, b, c)  &rmdht LMETA a &rmdht LALT b &rmdht LCTRL c
 #define RLCAM(a, b, c)  &rmdht LCTRL a &rmdht LALT b &rmdht LMETA c
 #define RMO_SYM(a)      &rlrht 3 a
+#define RNUM &mt LSHIFT N3
+#define RUBLE &mt RALT N8
 
 / {
 
@@ -141,7 +143,7 @@
         rus_combo_layer {
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp GRAVE  &kp DOT    &kp TAB
-            &kp Y      &kp H      &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
+            RNUM       RUBLE      &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
             &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp M      &kp SEMI   &kp X
                                              &kp ESC       &kp BSPC       LSH(SPC)   &kp ENTER
             >;
