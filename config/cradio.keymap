@@ -154,11 +154,11 @@
             >;
         };
 
-        rus_mod_layer {
+        rus_combo_layer {
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp GRAVE  &kp DOT    &kp TAB
             &kp Y      &kp H      &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
-            &kp LBKT   &kp V,     &kp COMMA, &kp O         &kp PSCRN      &kp CAPS   &kp G,     &kp M,     &kp SEMI   &kp X
+            &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp M      &kp SEMI   &kp X
                                              &kp ESC       &kp BSPC       LSH(SPC)   &kp ENTER
             >;
         };
