@@ -15,12 +15,35 @@
 #define RLMAC(a, b, c)  &rmdht LMETA a &rmdht LALT b &rmdht LCTRL c
 #define RLCAM(a, b, c)  &rmdht LCTRL a &rmdht LALT b &rmdht LMETA c
 #define RMO_SYM(a)      &rlrht 3 a
-#define RNUM &mt LSHIFT N3
-#define RUBLE &mt RALT N8
 
 / {
 
     macros {
+        rnum: rnum {
+            compatible="zmk,behavior-macro";
+            #binding-cells= <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+
+        ruble: ruble {
+            compatible="zmk,behavior-macro";
+            #binding-cells= <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp RALT>
+                ;
+        };
+
         lsw: lsw {
             compatible="zmk,behavior-macro";
             #binding-cells= <0>;
@@ -143,7 +166,7 @@
         rus_combo_layer {
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp GRAVE  &kp DOT    &kp TAB
-            RNUM       RUBLE      &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
+            &rnum      &ruble     &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
             &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp M      &kp SEMI   &kp X
                                              &kp ESC       &kp BSPC       LSH(SPC)   &kp ENTER
             >;
