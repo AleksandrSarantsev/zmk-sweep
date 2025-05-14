@@ -161,7 +161,7 @@
             &kp C_BRI_UP    &kp C_PREV     &kp C_PP   &kp C_NEXT   &bootloader          &bootloader &bt BT_CLR     &trans         BTSL(3)     &kp F12
             &kp C_BRI_DN    &kp C_VOL_DN   &kp C_MUTE &kp C_VOL_UP &sys_reset           &sys_reset  BTSL(0)        BTSL(1)        BTSL(2)     &kp F11
             &kp F1          LMAC(F2,       F3,        F4)          &kp F5               &kp F6      LCAM(F7,       F8,            F9)         &kp F10
-                                                      &trans       &trans               &lsw        &lswtog 3
+                                                      &trans       &trans               &lsw        &lswtog 1
             >;
         };
     };
