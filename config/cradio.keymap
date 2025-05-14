@@ -12,6 +12,10 @@
 #define MO_FUNC(a)     &lrht 2 a
 #define BTSL(a)        &bt BT_SEL a
 
+//#define LMACR(a, b, c)  &mdht LMETA a &mdht LALT b &mdht LCTRL c
+//#define LCAMR(a, b, c)  &mdht LCTRL a &mdht LALT b &mdht LMETA c
+//#define RMO_SYM(a)      &lrht 1 a
+//#define RMO_FUNC(a)     &lrht 2 a
 
 / {
 
@@ -25,6 +29,19 @@
                 = <&macro_press &kp LMETA>
                 , <&macro_tap &kp SPC>
                 , <&macro_release &kp LMETA>
+                ;
+        };
+
+        lswtl: lswtl {
+            compatible="zmk,behavior-macro";
+            #binding-cells= <0>;
+            wait-ms = <25>;
+            tap-ms = <25>;
+            bindings 
+                = <&macro_press &kp LMETA>
+                , <&macro_tap &kp SPC>
+                , <&macro_release &kp LMETA>
+                , <&macro_tap &tog 3>
                 ;
         };
     };
@@ -75,7 +92,7 @@
             &kp C_BRI_UP    &kp C_PREV     &kp C_PP   &kp C_NEXT   &bootloader          &bootloader &bt BT_CLR     &trans         BTSL(3)     &kp F12
             &kp C_BRI_DN    &kp C_VOL_DN   &kp C_MUTE &kp C_VOL_UP &sys_reset           &sys_reset  BTSL(0)        BTSL(1)        BTSL(2)     &kp F11
             &kp F1          LMAC(F2,       F3,        F4)          &kp F5               &kp F6      LCAM(F7,       F8,            F9)         &kp F10
-                                                      &trans       &trans               &lswt       &tog 3
+                                                      &trans       &trans               &lswt       &lswtl
             >;
         };
 
