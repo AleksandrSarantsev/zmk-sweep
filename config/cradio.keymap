@@ -22,7 +22,7 @@
         rnum: rnum {
             compatible="zmk,behavior-macro";
             #binding-cells= <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             tap-ms = <10>;
             bindings 
                 = <&macro_press &kp LSHIFT>
@@ -35,7 +35,7 @@
         ruble: ruble {
             compatible="zmk,behavior-macro";
             #binding-cells= <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             tap-ms = <10>;
             bindings 
                 = <&macro_press &kp RALT>
@@ -47,8 +47,8 @@
         lsw: lsw {
             compatible="zmk,behavior-macro";
             #binding-cells= <0>;
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <10>;
             bindings 
                 = <&macro_press &kp LMETA>
                 , <&macro_tap &kp SPC>
@@ -59,8 +59,8 @@
         lswtog: lswtog {
             compatible="zmk,behavior-macro-one-param";
             #binding-cells= <1>;
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <10>;
             bindings 
                 = <&macro_tap &lsw>
                 , <&macro_param_1to1>
@@ -71,8 +71,8 @@
         lswmo: lswmo {
             compatible="zmk,behavior-macro-one-param";
             #binding-cells= <1>;
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <10>;
             bindings 
                 = <&macro_tap &lsw>
                 , <&macro_param_1to1>
@@ -87,8 +87,8 @@
         rmod: rmod {
             compatible="zmk,behavior-macro-one-param";
             #binding-cells= <1>;
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <10>;
             bindings 
                 = <&macro_tap &tog 1>
                 , <&macro_press &mo 0>
