@@ -45,7 +45,7 @@
         
         lswmo: lswmo {
             compatible="zmk,behavior-macro";
-            #binding-cells= <0>;
+            #binding-cells= <1>;
             wait-ms = <25>;
             tap-ms = <25>;
             bindings 
@@ -61,7 +61,7 @@
 
         rmod: rmod {
             compatible="zmk,behavior-macro";
-            #binding-cells= <01>;
+            #binding-cells= <1>;
             wait-ms = <25>;
             tap-ms = <25>;
             bindings 
