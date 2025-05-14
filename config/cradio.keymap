@@ -19,19 +19,6 @@
 / {
 
     macros {
-        rnum: rnum {
-            compatible="zmk,behavior-macro";
-            #binding-cells= <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp N3>
-                , <&macro_release &kp LSHIFT>
-                ;
-        };
-
-
         ruble: ruble {
             compatible="zmk,behavior-macro";
             #binding-cells= <0>;
@@ -174,8 +161,8 @@
         rus_combo_layer {
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp GRAVE  &kp DOT    &kp TAB
-            &rnum      &ruble     &kp N      &kp C         &kp U          &kp Q      &kp RBKT   &kp Z      &kp SQT    &kp S
-            &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp M      &kp SEMI   &kp X
+            &kp HASH   &ruble     &kp N      &kp C         &kp U          &kp Q      &kp S      &kp Z      &kp SQT    &kp SEMI
+            &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp RBKT   &kp P   &kp X
                                              &kp ESC       &kp BSPC       LSH(SPC)   &kp ENTER
             >;
         };
