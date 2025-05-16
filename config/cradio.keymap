@@ -58,8 +58,7 @@
             wait-ms = <1>;
             tap-ms = <1>;
             bindings 
-                = 
-                , <&macro_tap &tog 1>
+                = <&macro_tap &tog 1>
                 , <&macro_press &mo 0>
                 , <&macro_tap_time 10>
                 , <&macro_param_1to1>
