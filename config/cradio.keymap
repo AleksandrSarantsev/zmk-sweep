@@ -48,7 +48,7 @@
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 , <&macro_tap_time 10>
                 , <&macro_wait_time 5>
-                , <&macro_tap &LG(SPC)>
+                , <&macro_tap &kp LG(SPC)>
                 ;
         };
 
