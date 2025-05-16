@@ -19,29 +19,6 @@
 / {
 
     macros {
-        ruble: ruble {
-            compatible="zmk,behavior-macro";
-            #binding-cells= <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp N8>
-                , <&macro_release &kp RALT>
-                ;
-        };
-
-        lsw: lsw {
-            compatible="zmk,behavior-macro";
-            #binding-cells= <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LMETA>
-                , <&macro_tap &kp SPC>
-                , <&macro_release &kp LMETA>
-                ;
-        };
 
         lswtog: lswtog {
             compatible="zmk,behavior-macro-one-param";
@@ -49,7 +26,7 @@
             wait-ms = <5>;
             tap-ms = <10>;
             bindings 
-                = <&macro_tap &lsw>
+                = <&macro_tap &kp LG(SPC)>
                 , <&macro_param_1to1>
                 , <&macro_tap &tog MACRO_PLACEHOLDER>
                 ;
@@ -61,7 +38,7 @@
             wait-ms = <5>;
             tap-ms = <10>;
             bindings 
-                = <&macro_tap &lsw>
+                = <&macro_tap &kp LG(SPC)>
                 , <&macro_tap_time 2>
                 , <&macro_wait_time 2>
                 , <&macro_param_1to1>
@@ -71,29 +48,28 @@
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 , <&macro_tap_time 10>
                 , <&macro_wait_time 5>
-                , <&macro_tap &lsw>
+                , <&macro_tap &LG(SPC)>
                 ;
         };
 
         rmod: rmod {
             compatible="zmk,behavior-macro-one-param";
             #binding-cells= <1>;
-            wait-ms = <5>;
-            tap-ms = <10>;
+            wait-ms = <1>;
+            tap-ms = <1>;
             bindings 
-                = <&macro_param_1to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_tap_time 2>
-                , <&macro_wait_time 2>
+                = 
                 , <&macro_tap &tog 1>
                 , <&macro_press &mo 0>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo 0>
-                , <&macro_tap &tog 1>
                 , <&macro_tap_time 10>
-                , <&macro_wait_time 5>
+                , <&macro_param_1to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
                 , <&macro_param_1to1>
                 , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_tap_time 1>
+                , <&macro_release &mo 0>
+                , <&macro_tap &tog 1>
                 ;
         };
     };
@@ -161,7 +137,7 @@
         rus_combo_layer {
             bindings = <
             &kp DEL    &kp K      &kp L      &kp W         &kp D          &kp R      &kp A      &kp GRAVE  &kp DOT    &kp TAB
-            &kp HASH   &ruble     &kp N      &kp C         &kp U          &kp Q      &kp S      &kp Z      &kp SQT    &kp SEMI
+            &kp HASH   &kp RA(N8) &kp N      &kp C         &kp U          &kp Q      &kp S      &kp Z      &kp SQT    &kp SEMI
             &kp LBKT   &kp V      &kp COMMA  &kp O         &kp PSCRN      &kp CAPS   &kp G      &kp RBKT   &kp P   &kp X
                                              &kp ESC       &kp BSPC       LSH(SPC)   &kp ENTER
             >;
